@@ -3,42 +3,26 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Samuel Arana | Data & Fraud Analyst</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Samuel Arana | Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      display: flex;
-      min-height: 100vh;
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
     }
-    #sidebar {
-      min-width: 250px;
-      max-width: 250px;
-      background: #1a73e8;
-      color: white;
-      padding-top: 2rem;
-      position: sticky;
-      top: 0;
-      height: 100vh;
-    }
-    #sidebar a {
-      color: white;
-      display: block;
-      padding: 0.75rem 1rem;
-      text-decoration: none;
-    }
-    #sidebar a:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-    #content {
-      flex: 1;
+    .tab-content {
       padding: 2rem;
+      background: white;
+      border-radius: 0 0.5rem 0.5rem 0.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     }
-    section {
-      margin-bottom: 3rem;
+    .nav-pills .nav-link.active {
+      background-color: #1a73e8;
     }
-    h2 {
-      color: #1a73e8;
+    .sidebar {
+      min-width: 200px;
+      max-width: 200px;
     }
     img {
       max-width: 100%;
@@ -49,68 +33,69 @@
   </style>
 </head>
 <body>
-  <nav id="sidebar">
-    <h4 class="text-center">Samuel Arana</h4>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#visuals">Visuals</a>
-    <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <div id="content">
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I’m an aspiring data analyst with 2+ years in fraud detection, chargeback analysis, and transaction monitoring. Skilled in SQL, Excel, Tableau, and Kount. I’m currently earning a Certificate in Data Analysis from Calbright College.</p>
-    </section>
-
-    <section id="skills">
-      <h2>Skills</h2>
-      <ul>
-        <li>SQL, Excel (Power Query, VLOOKUP), Tableau</li>
-        <li>Fraud tools: Kount, LexisNexis, Stripe</li>
-        <li>Compliance: PCI-DSS, AML, KYC</li>
-        <li>Soft Skills: Communication, Detail-Oriented, Problem-Solving</li>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2 bg-primary sidebar text-white p-3">
+      <h5>Samuel Arana</h5>
+      <ul class="nav flex-column nav-pills" id="portfolio-tabs" role="tablist">
+        <li class="nav-item"><a class="nav-link active" data-bs-toggle="pill" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#visuals">Visuals</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#resume">Resume</a></li>
+        <li class="nav-item"><a class="nav-link" data-bs-toggle="pill" href="#contact">Contact</a></li>
       </ul>
-    </section>
-
-    <section id="experience">
-      <h2>Experience</h2>
-      <p><strong>Fraud Investigator II / Process Specialist – Remitly</strong><br>Apr 2022 – Jan 2023</p>
-      <ul>
-        <li>Detected fraud trends and saved $500,000 annually</li>
-        <li>Collaborated with compliance to ensure AML/KYC adherence</li>
-      </ul>
-      <p><strong>Fraud Investigator I / Chargeback Analyst – Remitly</strong><br>May 2021 – Mar 2022</p>
-      <ul>
-        <li>Analyzed 100+ chargebacks/month and reduced fraud by 20%</li>
-        <li>Automated fraud flagging using Kount</li>
-      </ul>
-    </section>
-
-    <section id="projects">
-      <h2>Projects</h2>
-      <p><strong>Fraud Trends Dashboard</strong> – Tableau + SQL</p>
-      <p><strong>Dispute Pattern Analysis</strong> – Excel Pivot Tables</p>
-    </section>
-
-    <section id="visuals">
-      <h2>Visuals</h2>
-      <img src="fraud_dashboard_example.png" alt="Fraud Dashboard">
-      <img src="dispute_analysis_chart.png" alt="Dispute Trends">
-    </section>
-
-    <section id="resume">
-      <h2>Resume</h2>
-      <a href="resume.pdf" class="btn btn-primary" download>📄 Download My Resume</a>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:samueleliasarana@gmail.com">samueleliasarana@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/samuel-arana" target="_blank">linkedin.com/in/samuel-arana</a></p>
-    </section>
+    </div>
+    <div class="col-md-10 tab-content">
+      <div class="tab-pane fade show active" id="about">
+        <h2>About Me</h2>
+        <p>I’m an aspiring data analyst with 2+ years in fraud detection, chargeback analysis, and transaction monitoring. Skilled in SQL, Excel, Tableau, and Kount. I’m currently earning a Certificate in Data Analysis from Calbright College.</p>
+      </div>
+      <div class="tab-pane fade" id="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>SQL, Excel (Power Query, VLOOKUP), Tableau</li>
+          <li>Fraud tools: Kount, LexisNexis, Stripe</li>
+          <li>Compliance: PCI-DSS, AML, KYC</li>
+          <li>Soft Skills: Communication, Detail-Oriented, Problem-Solving</li>
+        </ul>
+      </div>
+      <div class="tab-pane fade" id="experience">
+        <h2>Experience</h2>
+        <p><strong>Fraud Investigator II / Process Specialist – Remitly</strong><br>Apr 2022 – Jan 2023</p>
+        <ul>
+          <li>Detected fraud trends and saved $500,000 annually</li>
+          <li>Collaborated with compliance to ensure AML/KYC adherence</li>
+        </ul>
+        <p><strong>Fraud Investigator I / Chargeback Analyst – Remitly</strong><br>May 2021 – Mar 2022</p>
+        <ul>
+          <li>Analyzed 100+ chargebacks/month and reduced fraud by 20%</li>
+          <li>Automated fraud flagging using Kount</li>
+        </ul>
+      </div>
+      <div class="tab-pane fade" id="projects">
+        <h2>Projects</h2>
+        <p><strong>Fraud Trends Dashboard</strong> – Tableau + SQL</p>
+        <p><strong>Dispute Pattern Analysis</strong> – Excel Pivot Tables</p>
+      </div>
+      <div class="tab-pane fade" id="visuals">
+        <h2>Visuals</h2>
+        <img src="fraud_dashboard_example.png" alt="Fraud Dashboard">
+        <img src="dispute_analysis_chart.png" alt="Dispute Chart">
+      </div>
+      <div class="tab-pane fade" id="resume">
+        <h2>Resume</h2>
+        <a href="resume.pdf" class="btn btn-primary" download>📄 Download My Resume</a>
+      </div>
+      <div class="tab-pane fade" id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:samueleliasarana@gmail.com">samueleliasarana@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/samuel-arana" target="_blank">linkedin.com/in/samuel-arana</a></p>
+      </div>
+    </div>
   </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
